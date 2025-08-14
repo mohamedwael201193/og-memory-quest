@@ -67,15 +67,20 @@ const Index = () => {
           className="text-center mb-8"
         >
           <motion.h1 
-            className="text-5xl font-bold mb-4 text-gradient"
+            className="text-5xl font-bold mb-4 text-gradient flex items-center justify-center gap-4"
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 200 }}
           >
-            Nebula Memory Grid
+            <div className="flex items-center gap-2">
+              <div className="bg-gradient-to-r from-primary to-secondary p-3 rounded-xl glow-primary">
+                <span className="text-2xl font-black text-background">OG</span>
+              </div>
+              Memory Grid
+            </div>
           </motion.h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Test your memory in the cosmic depths. Repeat the glowing sequences and compete on the blockchain leaderboard.
+            Test your memory in the cosmic depths. Repeat the glowing sequences and compete on the OG-Galileo-Testnet blockchain leaderboard.
           </p>
         </motion.header>
 
@@ -180,7 +185,7 @@ const Index = () => {
           transition={{ delay: 0.8 }}
           className="text-center mt-16 text-sm text-muted-foreground"
         >
-          <p>Powered by OG-Galileo-Testnet • Built with ❤️ for the cosmic community</p>
+          <p>Powered by OG-Galileo-Testnet • Made by <span className="text-primary font-semibold">DEVMO</span></p>
         </motion.footer>
       </div>
     </div>
