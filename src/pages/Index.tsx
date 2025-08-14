@@ -200,7 +200,7 @@ const Index = () => {
           transition={{ delay: 0.8 }}
           className="text-center mt-16 text-sm text-muted-foreground"
         >
-          <p>Powered by OG • Made by <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-bold">DEVMO</span> for OG Labs</p>
+          <p>Powered by OG • Made by <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-bold">DEVMO.</span> for OG Labs</p>
         </motion.footer>
       </div>
     </div>
