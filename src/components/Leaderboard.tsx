@@ -34,7 +34,7 @@ export const Leaderboard = ({ scores, currentPlayerAddress }: LeaderboardProps) 
       <div className="glass rounded-lg p-6 text-center">
         <h3 className="text-lg font-semibold mb-4 text-gradient flex items-center justify-center gap-2">
           <Crown className="w-5 h-5" />
-          O+G Leaderboard
+          OG Leaderboard
         </h3>
         <p className="text-muted-foreground">No scores yet. Be the first to submit!</p>
       </div>
@@ -50,7 +50,7 @@ export const Leaderboard = ({ scores, currentPlayerAddress }: LeaderboardProps) 
     >
       <h3 className="text-lg font-semibold mb-4 text-gradient flex items-center gap-2">
         <Crown className="w-5 h-5" />
-        O+G Leaderboard
+        OG Leaderboard
         <div className="ml-auto text-xs bg-accent/20 text-accent px-2 py-1 rounded-full">
           Live on Chain
         </div>
