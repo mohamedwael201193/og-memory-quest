@@ -61,7 +61,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Nebula-specific colors
+				nebula: {
+					cyan: 'hsl(var(--nebula-cyan))',
+					purple: 'hsl(var(--nebula-purple))',
+					pink: 'hsl(var(--nebula-pink))',
+					blue: 'hsl(var(--nebula-blue))'
 				}
+			},
+			backgroundImage: {
+				'gradient-nebula': 'var(--gradient-nebula)',
+				'gradient-cosmic': 'var(--gradient-cosmic)',
+				'gradient-glow': 'var(--gradient-glow)'
+			},
+			boxShadow: {
+				'nebula': 'var(--shadow-nebula)',
+				'cyan': 'var(--shadow-cyan)',
+				'glow': 'var(--shadow-glow)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

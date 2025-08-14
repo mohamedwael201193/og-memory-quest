@@ -2,39 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Nebula Memory Grid Design System - Space/Cosmic Theme 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Space Background */
+    --background: 230 35% 7%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Glass Cards */
+    --card: 230 35% 10%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Popover */
+    --popover: 230 35% 10%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Nebula Primary Colors */
+    --primary: 280 100% 70%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Cosmic Secondary */
+    --secondary: 190 100% 50%;
+    --secondary-foreground: 230 35% 7%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Space */
+    --muted: 230 20% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent Glow */
+    --accent: 300 100% 65%;
+    --accent-foreground: 230 35% 7%;
 
-    --destructive: 0 84.2% 60.2%;
+    /* Destructive */
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders & Inputs */
+    --border: 230 20% 18%;
+    --input: 230 20% 18%;
+    --ring: 280 100% 70%;
+
+    /* Custom Nebula Colors */
+    --nebula-cyan: 190 100% 50%;
+    --nebula-purple: 280 100% 70%;
+    --nebula-pink: 320 100% 75%;
+    --nebula-blue: 240 100% 60%;
+    
+    /* Gradients */
+    --gradient-nebula: linear-gradient(135deg, hsl(280 100% 70%), hsl(190 100% 50%), hsl(320 100% 75%));
+    --gradient-cosmic: linear-gradient(45deg, hsl(230 35% 7%), hsl(240 50% 15%));
+    --gradient-glow: radial-gradient(circle, hsl(280 100% 70% / 0.3), transparent);
+    
+    /* Shadows */
+    --shadow-nebula: 0 0 30px hsl(280 100% 70% / 0.4);
+    --shadow-cyan: 0 0 20px hsl(190 100% 50% / 0.6);
+    --shadow-glow: 0 0 40px hsl(280 100% 70% / 0.3);
 
     --radius: 0.5rem;
 
@@ -56,33 +81,34 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Already optimized for dark space theme */
+    --background: 230 35% 7%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 230 35% 10%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 230 35% 10%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 280 100% 70%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 190 100% 50%;
+    --secondary-foreground: 230 35% 7%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 230 20% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 300 100% 65%;
+    --accent-foreground: 230 35% 7%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 230 20% 18%;
+    --input: 230 20% 18%;
+    --ring: 280 100% 70%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -101,5 +127,100 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  /* Glassmorphism Effect */
+  .glass {
+    @apply bg-card/20 backdrop-blur-md border border-border/30;
+  }
+  
+  /* Nebula Glow Effects */
+  .glow-nebula {
+    box-shadow: var(--shadow-nebula);
+  }
+  
+  .glow-cyan {
+    box-shadow: var(--shadow-cyan);
+  }
+  
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  /* Game Grid Tile States */
+  .grid-tile {
+    @apply w-20 h-20 rounded-xl border-2 border-border/50 bg-card/30 backdrop-blur-sm;
+    @apply transition-all duration-300 cursor-pointer;
+    @apply hover:border-primary/60 hover:bg-primary/10;
+  }
+  
+  .grid-tile.active {
+    @apply border-primary bg-primary/30 glow-primary;
+    animation: pulse-glow 0.6s ease-in-out;
+  }
+  
+  .grid-tile.correct {
+    @apply border-secondary bg-secondary/30;
+    box-shadow: 0 0 20px hsl(var(--nebula-cyan) / 0.6);
+  }
+  
+  .grid-tile.error {
+    @apply border-destructive bg-destructive/30;
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  /* Connect Wallet Button */
+  .btn-connect {
+    @apply px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-accent;
+    @apply text-primary-foreground font-semibold transition-all duration-300;
+    @apply hover:scale-105 hover:shadow-lg glow-primary;
+  }
+  
+  /* Score Display */
+  .score-display {
+    @apply text-4xl font-bold text-transparent bg-clip-text;
+    background-image: var(--gradient-nebula);
+    text-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  @keyframes pulse-glow {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes nebula-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Utility Classes */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-nebula {
+    animation: nebula-rotate 20s linear infinite;
+  }
+  
+  .text-gradient {
+    @apply text-transparent bg-clip-text;
+    background-image: var(--gradient-nebula);
   }
 }
