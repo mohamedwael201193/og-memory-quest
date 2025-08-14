@@ -72,16 +72,31 @@ const Index = () => {
             animate={{ scale: 1 }}
             transition={{ type: "spring", stiffness: 200 }}
           >
-            <div className="flex items-center gap-2">
-              <div className="bg-gradient-to-r from-primary to-secondary p-3 rounded-xl glow-primary">
-                <span className="text-2xl font-black text-background">OG</span>
+            <div className="flex items-center gap-3">
+              <div className="relative">
+                <div className="bg-gradient-to-r from-primary via-secondary to-accent p-4 rounded-2xl glow-primary">
+                  <span className="text-3xl font-black text-background">O+G</span>
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full animate-pulse"></div>
               </div>
-              Memory Grid
+              <div className="text-gradient">
+                <span className="text-primary">Memory</span> <span className="text-secondary">Grid</span>
+              </div>
             </div>
           </motion.h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-2">
             Test your memory in the cosmic depths. Repeat the glowing sequences and compete on the OG-Galileo-Testnet blockchain leaderboard.
           </p>
+          <motion.div 
+            className="flex items-center justify-center gap-2 text-sm text-accent"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+            <span>Powered by O+G Labs Technology</span>
+            <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+          </motion.div>
         </motion.header>
 
         {/* Wallet Connection */}
@@ -185,7 +200,7 @@ const Index = () => {
           transition={{ delay: 0.8 }}
           className="text-center mt-16 text-sm text-muted-foreground"
         >
-          <p>Powered by OG-Galileo-Testnet • Made by <span className="text-primary font-semibold">DEVMO</span></p>
+          <p>Powered by OG-Galileo-Testnet • Made by <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-bold">DEVMO</span> for O+G Labs</p>
         </motion.footer>
       </div>
     </div>

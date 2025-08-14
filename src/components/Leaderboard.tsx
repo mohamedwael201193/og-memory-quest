@@ -32,7 +32,10 @@ export const Leaderboard = ({ scores, currentPlayerAddress }: LeaderboardProps) 
   if (scores.length === 0) {
     return (
       <div className="glass rounded-lg p-6 text-center">
-        <h3 className="text-lg font-semibold mb-4 text-gradient">🏆 Leaderboard</h3>
+        <h3 className="text-lg font-semibold mb-4 text-gradient flex items-center justify-center gap-2">
+          <Crown className="w-5 h-5" />
+          O+G Leaderboard
+        </h3>
         <p className="text-muted-foreground">No scores yet. Be the first to submit!</p>
       </div>
     );
@@ -47,7 +50,10 @@ export const Leaderboard = ({ scores, currentPlayerAddress }: LeaderboardProps) 
     >
       <h3 className="text-lg font-semibold mb-4 text-gradient flex items-center gap-2">
         <Crown className="w-5 h-5" />
-        Leaderboard
+        O+G Leaderboard
+        <div className="ml-auto text-xs bg-accent/20 text-accent px-2 py-1 rounded-full">
+          Live on Chain
+        </div>
       </h3>
       
       <div className="space-y-3">
@@ -68,18 +74,26 @@ export const Leaderboard = ({ scores, currentPlayerAddress }: LeaderboardProps) 
             </div>
             
             <div className="flex-1 min-w-0">
-              <div className="font-mono text-sm truncate">
+              <div className="font-mono text-sm truncate flex items-center gap-2">
                 {formatAddress(entry.player)}
                 {isCurrentPlayer(entry.player) && (
-                  <span className="ml-2 text-xs text-primary font-medium">(You)</span>
+                  <span className="text-xs bg-primary/20 text-primary px-2 py-0.5 rounded-full font-medium">You</span>
                 )}
               </div>
+              {index < 3 && (
+                <div className="text-xs text-muted-foreground mt-1">
+                  {index === 0 ? "🥇 Champion" : index === 1 ? "🥈 Runner-up" : "🥉 Third Place"}
+                </div>
+              )}
             </div>
             
-            <div className="flex-shrink-0">
-              <span className="font-bold text-lg">
+            <div className="flex-shrink-0 text-right">
+              <div className="font-bold text-lg">
                 {entry.score}
-              </span>
+              </div>
+              <div className="text-xs text-muted-foreground">
+                points
+              </div>
             </div>
           </motion.div>
         ))}
