@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+## 🎮 OG Memory Quest
+OG Memory Quest is a competitive **on-chain memory challenge** built for the **OG Testnet** — where every click, score, and victory lives permanently on the blockchain. Designed with AI-ready mechanics for future integration into the **0G Modular Layer 1**, it’s not just a game — it’s the start of a new kind of on-chain eSports.
 
-## Project info
+Players connect their wallet, take on an increasingly complex memory sequence challenge, and lock in their score directly to the blockchain. The **live on-chain leaderboard** ranks players worldwide in real time, ensuring fair play and zero tampering.
 
-**URL**: https://lovable.dev/projects/602c9a77-3cd0-403b-b5ce-2b926e08553c
+---
 
-## How can I edit this code?
+### ✨ Key Features
+- **Immutable On-Chain Gameplay** — Scores recorded forever on OG Galileo Testnet smart contracts.
+- **Instant Wallet Connect** — Start playing in seconds via MetaMask.
+- **Global Live Leaderboard** — Watch your rank update instantly as scores roll in.
+- **AI-Ready Mechanics** — Engine designed for dynamic difficulty scaling via 0G Compute.
+- **Cross-Device Optimized** — Smooth, responsive experience on mobile and desktop.
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+### 🛠️ Tech Stack
+- **Frontend**: React, TailwindCSS, Viem/Ethers.js
+- **Smart Contracts**: Solidity (OG Galileo Testnet)
+- **Hosting**: Vercel
+- **Blockchain**: OG Galileo Testnet (EVM-compatible)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/602c9a77-3cd0-403b-b5ce-2b926e08553c) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📜 Smart Contract
+- **Name**: `NebulaMemoryGridOg.sol`  
+- **Address**: `0xFCB0A4bB58B80a7CDB1E58F50812abd99005B65B`  
 
-**Use your preferred IDE**
+**Key Functions:**
+- `submitScore(score)` — Save your latest score on-chain.
+- `getMyBestScore()` — Retrieve your personal record.
+- `getTopScores()` — View the global leaderboard.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🔗 Play Now
+[**▶ Live Demo**](https://og-memory-quest.vercel.app/)  
 
-Follow these steps:
+📂 [**GitHub Repository**](https://github.com/mohamedwael201193/og-memory-quest)  
+🎥 [**Demo Video**](https://youtu.be/CJ_vBHdqonI)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 🚀 Roadmap
+- **Wave 2** — Integrate **0G Compute** for AI-generated memory patterns & difficulty scaling.
+- **Wave 3** — Store full gameplay replays with **0G Storage**.
+- **Long Term** — Launch official seasonal tournaments with NFT prizes and verifiable on-chain rankings.
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 👨‍💻 Developer
+**Mohamed Wael** — Blockchain game developer passionate about building interactive, verifiable, and decentralized experiences. Actively contributing to the **0G ecosystem** with daily commits and community engagement.
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/602c9a77-3cd0-403b-b5ce-2b926e08553c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+📧 **Email**: mohamedwael2001193@gmail.com  
+🐙 **GitHub**: [mohamedwael201193](https://github.com/mohamedwael201193)  
+𝕏 **Twitter**: [Mowael777](https://x.com/Mowael777)  
+💬 **Telegram**: [@Mowael77](https://t.me/Mowael77)  
+🪩 **Discord**: `m.wael.7`
